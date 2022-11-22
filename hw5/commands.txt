@@ -1,0 +1,32 @@
+Q1
+python cs285/scripts/run_hw5_expl.py --env_name PointmassEasy-v0 --use_rnd --unsupervised_exploration --exp_name q1_env1_rnd
+python cs285/scripts/run_hw5_expl.py --env_name PointmassEasy-v0 --unsupervised_exploration --exp_name q1_env1_random
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --unsupervised_exploration --exp_name q1_env2_rnd
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --unsupervised_exploration --exp_name q1_env2_random
+
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --unsupervised_exploration <add arguments for your method> --exp_name q1_alg_med
+python cs285/scripts/run_hw5_expl.py --env_name PointmassHard-v0 --unsupervised_exploration <add arguments for your method> --exp_name q1_alg_hard
+
+Q2
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --exp_name q2_dqn --use_rnd --unsupervised_exploration --offline_exploitation --cql_alpha=0
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --exp_name q2_cql --use_rnd --unsupervised_exploration --offline_exploitation --cql_alpha=0.1
+
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --num_exploration_steps=[5000, 15000] --offline_exploitation --cql_alpha=0 --unsupervised_exploration --exp_name q2_cql_numsteps_[num_exploration_steps]
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --num_exploration_steps=[5000, 15000] --offline_exploitation --cql_alpha=0.1 --unsupervised_exploration --exp_name q2_cql_numsteps_[num_exploration_steps]
+python cs285/scripts/run_hw5_expl.py --env_name PointmassHard-v0 --use_rnd --num_exploration_steps=[5000, 15000] --offline_exploitation --cql_alpha=0 --unsupervised_exploration --exp_name q2_cql_numsteps_[num_exploration_steps]
+python cs285/scripts/run_hw5_expl.py --env_name PointmassHard-v0 --use_rnd --num_exploration_steps=[5000, 15000] --offline_exploitation --cql_alpha=0.1 --unsupervised_exploration --exp_name q2_cql_numsteps_[num_exploration_steps]
+
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --unsupervised_exploration --offline_exploitation --cql_alpha=[0.02, 0.5] --exp_name q2_alpha[cql_alpha]
+
+Q3
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --num_exploration_steps=20000 --cql_alpha=0.0 --exp_name q3_medium_dqn
+python cs285/scripts/run_hw5_expl.py --env_name PointmassMedium-v0 --use_rnd --num_exploration_steps=20000 --cql_alpha=1.0 --exp_name q3_medium_cql
+python cs285/scripts/run_hw5_expl.py --env_name PointmassHard-v0 --use_rnd --num_exploration_steps=20000 --cql_alpha=0.0 --exp_name q3_hard_dqn
+python cs285/scripts/run_hw5_expl.py --env_name PointmassHard-v0 --use_rnd --num_exploration_steps=20000 --cql_alpha=1.0 --exp_name q3_hard_cql
+
+Q4
+python cs285/scripts/run_hw5_awac.py --env_name PointmassEasy-v0 --exp_name q4_awac_easy_unsupervised_lam{} --use_rnd --num_exploration_steps=20000 --unsupervised_exploration --awac_lambda={0.1,1,2,10,20,50}
+python cs285/scripts/run_hw5_awac.py --env_name PointmassEasy-v0 --use_rnd --num_exploration_steps=20000 --awac_lambda={0.1,1,2,10,20,50 --exp_name q4_awac_easy_supervised_lam{0.1,1,2,10,20,50}
+
+python cs285/scripts/run_hw5_awac.py --env_name PointmassMedium-v0 --exp_name q4_awac_medium_unsupervised_lam{} --use_rnd --num_exploration_steps=20000 --unsupervised_exploration --awac_lambda={0.1,1,2,10,20,50}
+python cs285/scripts/run_hw5_awac.py --env_name PointmassMedium-v0 --use_rnd --num_exploration_steps=20000 --awac_lambda={0.1,1,2,10,20,50} --exp_name q4_awac_medium_supervised_lam{0.1,1,2,10,20,50}
